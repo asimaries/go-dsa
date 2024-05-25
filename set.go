@@ -14,6 +14,7 @@ func NewSet[T comparable]() *Set[T] {
 	var set Set[T]
 
 	set.items = make(map[T]struct{})
+	fmt.Print(&set)
 	return &set
 }
 
@@ -40,6 +41,13 @@ func (s *Set[T]) Contains(element T) bool {
 // Size - returns size of Set
 func (s *Set[T]) Size() int {
 	return len(s.items)
+}
+
+// Clear - reinitializes the Set
+func (s *Set[T]) Clear() {
+	s.items = make(map[T]struct{})
+	fmt.Print(s)
+
 }
 
 // Print set
