@@ -1,4 +1,4 @@
-package dsa
+package set
 
 import (
 	"errors"
